@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Crud_madde_halleri.Models.Table>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<p>
+    @Html.ActionLink("Madde Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaddeAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sıcaklık)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ErimeNoktası)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KaynamaNoktası)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HalDurumu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaddeAd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sıcaklık)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ErimeNoktası)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KaynamaNoktası)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HalDurumu)
+        </td>
+        <td>
+            @Html.ActionLink("Güncelle", "Edit", new { id=item.MaddeID }) |
+            @Html.ActionLink("Detay", "Details", new { id=item.MaddeID }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.MaddeID })
+        </td>
+    </tr>
+}
+
+</table>

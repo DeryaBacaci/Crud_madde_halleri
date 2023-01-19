@@ -1,0 +1,58 @@
+﻿@model Crud_madde_halleri.Models.Table
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Table</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaddeAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaddeAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sıcaklık)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sıcaklık)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ErimeNoktası)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ErimeNoktası)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KaynamaNoktası)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KaynamaNoktası)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HalDurumu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HalDurumu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaddeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
