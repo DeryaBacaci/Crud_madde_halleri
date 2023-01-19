@@ -13,12 +13,11 @@ namespace Crud_madde_halleri.Controllers
     public class TablesController : Controller
     {
         private Database1Entities1 db = new Database1Entities1();
-
+       //**************************************************
         // GET: Tables
         public ActionResult Index()
         {
             return View(db.Table.ToList());
-
 
         }
 
